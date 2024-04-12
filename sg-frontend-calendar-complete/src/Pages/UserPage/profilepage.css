@@ -1,0 +1,146 @@
+/* .user-profile-container {
+  min-height: 100vh;
+  background-color: #242743;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile {
+  background-color: #141625;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 50%;
+}
+
+.user-profile-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+} */
+
+/* button {
+  padding: 0.5rem 1rem;
+
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+} */
+
+
+.user-profile-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #242743;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color:white;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+  width: calc(100% - 12px);
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color:white;
+  background-color: #242743;
+}
+
+.form-group option.selected{
+  /* background-color: #141625; */
+
+}
+
+.skills-select {
+  height: 100px;
+}
+
+.selected-skills-container {
+  margin-top: 10px;
+}
+
+.delete-skill-button {
+  margin-right: 5px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.logout-button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.selected-skills-div{
+  display: flex;
+  flex-direction: row;
+  color:white;
+}
+#selected-skills{
+  width:200px;
+}
+.skill-delete{
+  height:35px;;
+  width:auto;
+  color:red;
+}
+
+.selected-skills-container{
+  width:90%;
+  margin:auto;
+  display: flex;
+  /* flex-direction: row; */
+  gap:1rem;
+  flex-wrap: wrap;
+
+}
+
