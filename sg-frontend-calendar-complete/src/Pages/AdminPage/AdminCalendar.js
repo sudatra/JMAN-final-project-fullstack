@@ -71,9 +71,9 @@ const AdminCalendar = () => {
 
   const eventStyleGetter = (event, start, end, isSelected) => {
     let newStyle = {
-      backgroundColor: "lightgrey",
-      color: "black",
-      borderRadius: "Opx",
+      backgroundColor: "blue-500",
+      color: "white",
+      borderRadius: "0.5rem",
       border: "none",
     };
 
@@ -90,13 +90,13 @@ const AdminCalendar = () => {
   };
 
   return adminToken ? (
-    <div>
+    <div className="p-4 bg-white shadow rounded-lg overflow-y-hidden">
       <Calendar
         localizer={localizer}
         events={allEvents}
         startAccessor="start"
         endAccessor="end"
-        style={{ height: 500 }}
+        style={{ height: '100vh' }}
         eventPropGetter={eventStyleGetter}
       />
     </div>

@@ -121,7 +121,7 @@ function UserPage() {
       <div className="mt-5 overflow-x-hidden bg-gray-200">
         <div className="mt-5">
           <div className="d-flex justify-content-between align-items-center">
-            <h2 className="text-3xl flex justify-center">Events in Queue!</h2>
+            <h2 className="text-3xl flex justify-center">Top Events</h2>
           </div>
           <div className="flex justify-evenly items-center flex-wrap gap-4 w-full mt-3 overflow-x-hidden">
             {topUpcomingEvents?.map((event, index) => (
@@ -144,7 +144,7 @@ function UserPage() {
         </div>
 
         <div className="mx-auto">
-          <h2 className="text-3xl flex justify-center">Registered Events</h2>
+          <h2 className="text-3xl flex justify-center">Your Events</h2>
           <div className="items-center flex flex-wrap gap-4 justify-evenly w-full overflow-x-hidden mt-3 ">
             {registeredUpcomingEvents?.map((event, index) => (
               <div className="col-md-4 mb-4" key={index}>

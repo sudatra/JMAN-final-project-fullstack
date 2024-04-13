@@ -49,40 +49,41 @@ function CreateUserPage() {
   };
 
   return adminToken ? (
-    <div class="bg-gray-100 min-h-screen flex flex-col justify-center items-center">
-      <div class="bg-white p-10 rounded-lg shadow-lg">
-        <h1 class="text-4xl font-bold mb-8">Welcome, Admin!</h1>
-        <form onSubmit={handleSubmit} class="create-event-form space-y-4">
-          <h2 class="text-2xl font-bold">Create User</h2>
-          <div class="create-event-container">
-            <div class="event-container-left">
-              <div class="form-group">
-                <label class="block font-medium text-gray-800">Name:</label>
-                <input
-                  type="text"
-                  name="name"
-                  value={userData.name}
-                  onChange={handleInputChange}
-                  required
-                  class="create-event-input-field bg-gray-200"
-                />
-              </div>
-              <div class="form-group">
-                <label class="block font-medium text-gray-800">Email:</label>
-                <input
-                  type="email"
-                  name="email"
-                  value={userData.email}
-                  onChange={handleInputChange}
-                  required
-                  class="create-event-input-field bg-gray-200"
-                />
-              </div>
-            </div>
+    <div className="bg-gray-100 min-h-screen flex flex-col justify-center items-center p-4">
+      <div className="bg-white p-8 md:p-12 rounded-lg shadow-lg w-full max-w-lg">
+        <h1 className="text-4xl font-bold mb-6">Welcome, Admin!</h1>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <h2 className="text-2xl font-bold">Create User</h2>
+          
+          <div className="form-group">
+            <label htmlFor="name" className="block text-lg font-medium text-gray-700">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={userData.name}
+              onChange={handleInputChange}
+              required
+              className="mt-1 block w-full px-4 py-2 text-gray-700 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
           </div>
+          
+          <div className="form-group">
+            <label htmlFor="email" className="block text-lg font-medium text-gray-700">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={userData.email}
+              onChange={handleInputChange}
+              required
+              className="mt-1 block w-full px-4 py-2 text-gray-700 bg-gray-50 border border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+            />
+          </div>
+          
           <button
             type="submit"
-            class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-gray-800"
+            className="w-full bg-black text-white font-semibold py-2 px-4 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-gray-800 transition duration-150 ease-in-out"
           >
             Create User
           </button>
@@ -90,6 +91,7 @@ function CreateUserPage() {
       </div>
       <ToastContainer />
     </div>
+
   ) : (
     <h1 className="text-black text-4xl flex justify-center">
       you are not an admin!!!

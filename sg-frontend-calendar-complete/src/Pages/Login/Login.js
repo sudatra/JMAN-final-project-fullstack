@@ -47,7 +47,8 @@ const LoginPage = () => {
       You are already logged in !!!
     </h1>
   ) : (
-    <div className="login-page bg-gray-100 min-h-screen flex justify-center items-center">
+    <div className="login-page bg-gray-100 min-h-screen flex justify-center items-center"
+    >
       <div className="main-container">
         <div className="login-form-container bg-white p-8 rounded shadow-md">
           <h2 className="login-heading text-2xl font-bold mb-4">Login</h2>

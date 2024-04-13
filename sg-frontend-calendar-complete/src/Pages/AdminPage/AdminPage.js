@@ -72,51 +72,52 @@ function AdminPage() {
   };
 
   return jwtToken ? (
-    <div class="admin-page bg-gray-100 min-h-screen flex flex-col justify-center items-center">
-      <h1 class="text-4xl font-bold mb-8">Hello Admin!!</h1>
-      <div class="admin-activity flex flex-wrap justify-center gap-4">
+
+    <div className="admin-page bg-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
+      <h1 className="text-4xl font-bold text-gray-800 mb-12">Hello Admin!</h1>
+      <div className="admin-activity flex flex-row flex-wrap justify-center gap-4">
         <Link to="/create-user">
-          <button class="create-user bg-white py-6 px-8 rounded-lg shadow-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <TiUserAdd class="activity-icon text-4xl mb-2" />
-            <p class="activity-title text-xl font-semibold">Create User</p>
+          <button className="create-user bg-white py-4 px-6 rounded-lg shadow-lg hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 ease-in-out">
+            <TiUserAdd className="activity-icon text-4xl text-blue-500 mb-2" />
+            <p className="activity-title text-xl font-semibold text-gray-700">Create User</p>
           </button>
         </Link>
         <Link to="/create-event">
-          <button class="create-event bg-white py-6 px-8 rounded-lg shadow-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <MdOutlineEventNote class="activity-icon text-4xl mb-2" />
-            <p class="activity-title text-xl font-semibold">Create Event</p>
+          <button className="create-event bg-white py-4 px-6 rounded-lg shadow-lg hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-150 ease-in-out">
+            <MdOutlineEventNote className="activity-icon text-4xl text-green-500 mb-2" />
+            <p className="activity-title text-xl font-semibold text-gray-700">Create Event</p>
           </button>
         </Link>
         <Link to="/upcoming-event">
-          <button class="upcoming-events bg-white py-6 px-8 rounded-lg shadow-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <MdOutlineEventRepeat class="activity-icon text-4xl mb-2" />
-            <p class="activity-title text-xl font-semibold">Upcoming Events</p>
+          <button className="upcoming-events bg-white py-4 px-6 rounded-lg shadow-lg hover:bg-purple-100 focus:outline-none focus:ring-2 focus:ring-purple-500 transition duration-150 ease-in-out">
+            <MdOutlineEventRepeat className="activity-icon text-4xl text-purple-500 mb-2" />
+            <p className="activity-title text-xl font-semibold text-gray-700">Upcoming Events</p>
           </button>
         </Link>
         <Link to="/past-events">
-          <button class="past-events bg-white py-6 px-8 rounded-lg shadow-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <MdEventAvailable class="activity-icon text-4xl mb-2" />
-            <p class="activity-title text-xl font-semibold">Past Events</p>
+          <button className="past-events bg-white py-4 px-6 rounded-lg shadow-lg hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-red-500 transition duration-150 ease-in-out">
+            <MdEventAvailable className="activity-icon text-4xl text-red-500 mb-2" />
+            <p className="activity-title text-xl font-semibold text-gray-700">Past Events</p>
           </button>
         </Link>
         <Link to="/admin-calendar">
-          <button class="past-events bg-white py-6 px-8 rounded-lg shadow-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500">
-            <MdEventAvailable class="activity-icon text-4xl mb-2" />
-            <p class="activity-title text-xl font-semibold">Admin Calendar</p>
+          <button className="admin-calendar bg-white py-4 px-6 rounded-lg shadow-lg hover:bg-orange-100 focus:outline-none focus:ring-2 focus:ring-orange-500 transition duration-150 ease-in-out">
+            <MdEventAvailable className="activity-icon text-4xl text-orange-500 mb-2" />
+            <p className="activity-title text-xl font-semibold text-gray-700">Admin Calendar</p>
           </button>
         </Link>
       </div>
       <div>
         <button
           onClick={handleLogout}
-          class="mt-8 bg-black text-white py-2 px-6 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-gray-800"
+          className="mt-10 bg-black text-white py-2 px-6 rounded-md hover:bg-gray-800 focus:outline-none focus:bg-gray-800 transition duration-150 ease-in-out"
         >
           LogOut
         </button>
       </div>
-
       <ToastContainer />
     </div>
+
   ) : (
     <h1 className="text-black text-4xl flex justify-center">
       you are not an admin!!!
