@@ -13,7 +13,7 @@ exports.addUserEvent = async (req, res) => {
   const { eventId } = req.body;
 
   try {
-    const existingUserEvent = await UserEventInterest.findOne({
+    const existingUserEvent = await UserEvent.findOne({
       userId,
       eventId,
     });
